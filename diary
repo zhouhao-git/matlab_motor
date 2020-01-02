@@ -1,0 +1,1582 @@
+clc
+x = pi;
+y = cos(x);
+y
+
+y =
+
+    -1
+
+
+1 + 2i
+
+ans =
+
+   1.0000 + 2.0000i
+
+z = 1 + 2i
+
+z =
+
+   1.0000 + 2.0000i
+
+real(z)
+
+ans =
+
+     1
+
+imag(z)
+
+ans =
+
+     2
+
+clear
+imag(z)
+{未定义函数或变量 'z'。
+} 
+clc
+x = 20;
+y = 1 / (sin(x) + cos(x - 1))
+
+y =
+
+    0.5259
+
+x = 20:20:80;
+y = 1 / (sin(x) + cos(x - 1))
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+矩阵维度必须一致。
+} 
+x = 20:20:80;
+y = 1 ./ (sin(x) + cos(x - 1))
+
+y =
+
+    0.5259    0.9884   -0.9295   -0.5291
+
+x = 20:20:80;
+y = 1 ./ (sin(x) + cos(x - 1));
+format long,y
+
+y =
+
+   0.525859158589971   0.988380506999177  -0.929462319996697  -0.529139836431243
+
+clc
+a = 'this is a book'
+
+a =
+
+this is a book
+
+a(2)
+
+ans =
+
+h
+
+a(5)
+
+ans =
+
+ 
+
+a(4)
+
+ans =
+
+s
+
+x = [1;2;3]
+
+x =
+
+     1
+     2
+     3
+
+clc
+x = linspace(0,10,5)
+
+x =
+
+  1 至 4 列
+
+                   0   2.500000000000000   5.000000000000000   7.500000000000000
+
+  5 列
+
+  10.000000000000000
+
+clc
+3
+
+ans =
+
+     3
+
+x = 3
+
+x =
+
+     3
+
+clc
+x = logspace(1,3,3)
+
+x =
+
+          10         100        1000
+
+x = logspace(1,5,5)
+
+x =
+
+          10         100        1000       10000      100000
+
+
+x(1:3)
+
+ans =
+
+          10         100        1000
+
+clear a
+x(2:5)
+
+ans =
+
+         100        1000       10000      100000
+
+x(3)
+
+ans =
+
+        1000
+
+clear y
+y = [1 2 3;4 5 6;7 8 9]
+
+y =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+y = [[1 2 3];[4 5 6];7 8 9]
+
+y =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+clc
+cd .
+cd..
+ cd..
+   ↑
+{错误:  MATLAB 运算符异常。
+} 
+cd.
+ cd.
+    ↑
+{错误: 表达式或语句不完整或不正确。
+} 
+cd ..
+dir
+
+.                              PMSM                           slprj                          
+..                             PMSM仿真.rar                     随书仿真模型                         
+.git                           en.x-cube-mcsdk-ful_5.0.1.exe  
+20160104szyssj.rar             en.x-cube-mcsdk-ful_5.0.1.rar  
+MATLAB                         en.x-cube-mcsdk_5.2.0.zip      
+
+cd PMSM
+load data.txt
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+ASCII 文件 data.txt 的第 3 行中的列数必须与前面行中的列数相同。
+} 
+load data.txt
+data
+
+data =
+
+    12     1
+     1    24
+     1    38
+
+data
+
+data =
+
+    12     1
+     1    24
+     1    38
+
+load data.txt
+data
+
+data =
+
+     1     2     1
+     1     2     4
+     1     3     8
+
+data(1,:)=[]
+
+data =
+
+     1     2     4
+     1     3     8
+
+data
+
+data =
+
+     1     2     4
+     1     3     8
+
+data(,:1)=[]
+ data(,:1)=[]
+      ↑
+{错误: 表达式或语句不正确--可能 (、{ 或 [ 不对称。
+} 
+data(:,1)=[]
+
+data =
+
+     2     4
+     3     8
+
+data
+
+data =
+
+     2     4
+     3     8
+
+load data.txt
+data
+
+data =
+
+     1     2     1
+     1     2     4
+     1     3     8
+
+clear y
+clear x
+clear ans
+dat
+{未定义函数或变量 'dat'。
+} 
+date
+
+ans =
+
+28-Nov-2019
+
+clear ans
+data
+
+data =
+
+     1     2     1
+     1     2     4
+     1     3     8
+
+time
+{未定义函数或变量 'time'。
+} 
+Rot(90)
+{未定义函数或变量 'Rot'。
+} 
+data(90)
+{索引超出矩阵维度。
+} 
+Rot(data,90)
+{未定义函数或变量 'Rot'。
+} 
+Fliplr(data)
+{找不到 'Fliplr' 的完全匹配项(区分大小写)。
+
+最接近的匹配项为: fliplr(在 J:\matlab\matlab2016a\toolbox\matlab\elmat\fliplr.m 中)
+
+} 
+fliplr(data)
+
+ans =
+
+     1     2     1
+     4     2     1
+     8     3     1
+
+fliplr(data)
+
+ans =
+
+     1     2     1
+     4     2     1
+     8     3     1
+
+data
+
+data =
+
+     1     2     1
+     1     2     4
+     1     3     8
+
+x = flipup(data)
+{未定义函数或变量 'flipup'。
+} 
+x = flipud(data)
+
+x =
+
+     1     3     8
+     1     2     4
+     1     2     1
+
+data
+
+data =
+
+     1     2     1
+     1     2     4
+     1     3     8
+
+flipdim(data,1)
+
+ans =
+
+     1     3     8
+     1     2     4
+     1     2     1
+
+flipdim(data,2)
+
+ans =
+
+     1     2     1
+     4     2     1
+     8     3     1
+
+clc
+clear all
+clcl
+{未定义函数或变量 'clcl'。
+} 
+clc
+A = [1 2;3 4];
+B = 3 + 2*i;
+C = 'efg';
+D = 2;
+E = [A,B,C,D]
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('horzcat')" style="font-weight:bold">horzcat</a>
+从 double 转换为 char 时出现以下错误:
+复数值不能转换为字符
+} 
+E = {A,B,C,D}
+
+E = 
+
+    [2x2 double]    [3.000000000000000 + 2.000000000000000i]    'efg'    [2]
+
+E = cell(3);
+E{1,1} = [1:4];
+E{1,2} = B;
+E{1,3} = 2;
+E
+
+E = 
+
+    [1x4 double]    [3.000000000000000 + 2.000000000000000i]    [2]
+              []                                          []     []
+              []                                          []     []
+
+E{1}
+
+ans =
+
+     1     2     3     4
+
+E{2}
+
+ans =
+
+     []
+
+cellfun('display',E)
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cellfun')" style="font-weight:bold">cellfun</a>
+未知选项。
+} 
+cellfun('islogical',E)
+
+ans =
+
+     0     0     0
+     0     0     0
+     0     0     0
+
+cellplot(E)
+CLC
+{未定义函数或变量 'CLC'。
+} 
+clc
+clear all
+clc
+msg = struct('name',{'zhouhao','wangchao','xudong','bao'},'age',{23,24,25,26})
+
+msg = 
+
+1x4 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    age
+
+msg(1)
+
+ans = 
+
+    name: 'zhouhao'
+     age: 23
+
+msg(2)
+
+ans = 
+
+    name: 'wangchao'
+     age: 24
+
+msg(1).name
+
+ans =
+
+zhouhao
+
+msg(4).age
+
+ans =
+
+    26
+
+clc
+a = [1 2 3 4 5]
+
+a =
+
+     1     2     3     4     5
+
+a'
+
+ans =
+
+     1
+     2
+     3
+     4
+     5
+
+y = a'
+
+y =
+
+     1
+     2
+     3
+     4
+     5
+
+clc
+x=[0:2*pi/90:2*pi]
+
+x =
+
+  1 至 4 列
+
+                   0   0.069813170079773   0.139626340159546   0.209439510239320
+
+  5 至 8 列
+
+   0.279252680319093   0.349065850398866   0.418879020478639   0.488692190558412
+
+  9 至 12 列
+
+   0.558505360638185   0.628318530717959   0.698131700797732   0.767944870877505
+
+  13 至 16 列
+
+   0.837758040957278   0.907571211037051   0.977384381116825   1.047197551196598
+
+  17 至 20 列
+
+   1.117010721276371   1.186823891356144   1.256637061435917   1.326450231515691
+
+  21 至 24 列
+
+   1.396263401595464   1.466076571675237   1.535889741755010   1.605702911834783
+
+  25 至 28 列
+
+   1.675516081914557   1.745329251994330   1.815142422074103   1.884955592153876
+
+  29 至 32 列
+
+   1.954768762233649   2.024581932313422   2.094395102393195   2.164208272472969
+
+  33 至 36 列
+
+   2.234021442552742   2.303834612632515   2.373647782712288   2.443460952792061
+
+  37 至 40 列
+
+   2.513274122871835   2.583087292951608   2.652900463031381   2.722713633111154
+
+  41 至 44 列
+
+   2.792526803190927   2.862339973270700   2.932153143350474   3.001966313430247
+
+  45 至 48 列
+
+   3.071779483510020   3.141592653589793   3.211405823669566   3.281218993749339
+
+  49 至 52 列
+
+   3.351032163829113   3.420845333908886   3.490658503988659   3.560471674068432
+
+  53 至 56 列
+
+   3.630284844148205   3.700098014227979   3.769911184307752   3.839724354387525
+
+  57 至 60 列
+
+   3.909537524467298   3.979350694547071   4.049163864626845   4.118977034706617
+
+  61 至 64 列
+
+   4.188790204786391   4.258603374866164   4.328416544945937   4.398229715025710
+
+  65 至 68 列
+
+   4.468042885105484   4.537856055185257   4.607669225265029   4.677482395344804
+
+  69 至 72 列
+
+   4.747295565424576   4.817108735504349   4.886921905584122   4.956735075663896
+
+  73 至 76 列
+
+   5.026548245743669   5.096361415823442   5.166174585903216   5.235987755982989
+
+  77 至 80 列
+
+   5.305800926062762   5.375614096142535   5.445427266222308   5.515240436302081
+
+  81 至 84 列
+
+   5.585053606381854   5.654866776461628   5.724679946541401   5.794493116621174
+
+  85 至 88 列
+
+   5.864306286700947   5.934119456780721   6.003932626860493   6.073745796940266
+
+  89 至 91 列
+
+   6.143558967020040   6.213372137099813   6.283185307179586
+
+clc
+clear x
+edit
+Untitled
+Untitled
+mov diary
+{未定义函数或变量 'mov'。
+} 
+delete(diary)
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('diary')" style="font-weight:bold">diary</a>
+输出参数太多。
+} 
+delete(Untitled.m)
+{未定义变量 "Untitled" 或类 "Untitled.m"。
+} 
+delete('diary')
+[警告: 未找到文件或者权限被拒绝] 
+delete('Untitled.m')
+delete('sim_inputo.m')
+delete('cmd_in_out.slx')
+cd..
+ cd..
+   ↑
+{错误:  MATLAB 运算符异常。
+} 
+cd ..
+dir
+
+.                              en.x-cube-mcsdk-ful_5.0.1.exe  
+..                             en.x-cube-mcsdk-ful_5.0.1.rar  
+.git                           en.x-cube-mcsdk_5.2.0.zip      
+20160104szyssj.rar             slprj                          
+MATLAB                         随书仿真模型                         
+PMSM                           
+PMSM仿真.rar                     
+
+cd PMSM\
+cd ..
+clc
+edit
+magver(4)
+{未定义函数或变量 'magver'。
+} 
+magver(4)
+{错误: <a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',20,5)">文件:magver.m 行:20 列:5
+</a>BREAK 语句显示在循环之外。请改用 RETURN。
+} 
+magver(4)
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+diagval =
+
+    34
+
+magver(4)
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',9,1)">9   </a>        rowval
+dbstep in
+
+rowval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',10,1)">10  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',5,1)">5   </a>        rowval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',6,1)">6   </a>        for j = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',9,1)">9   </a>        rowval
+
+rowval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',10,1)">10  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',5,1)">5   </a>        rowval = 0;
+if system_dependent('IsDebugMode')==1, dbquit; end
+magver(4)
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',4,1)">4   </a>    for i = 1:n
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',9,1)">9   </a>        rowval
+dbstep in
+
+rowval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',10,1)">10  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',5,1)">5   </a>        rowval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',6,1)">6   </a>        for j = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',9,1)">9   </a>        rowval
+dbstep in
+
+rowval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',10,1)">10  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',5,1)">5   </a>        rowval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',6,1)">6   </a>        for j = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',9,1)">9   </a>        rowval
+dbstep in
+
+rowval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',10,1)">10  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',5,1)">5   </a>        rowval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',6,1)">6   </a>        for j = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',7,1)">7   </a>            rowval = rowval + x(i,j);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',8,1)">8   </a>        end
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',9,1)">9   </a>        rowval
+dbstep in
+
+rowval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',10,1)">10  </a>    end
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',11,1)">11  </a>    for i = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',12,1)">12  </a>        colval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',13,1)">13  </a>        for j = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',16,1)">16  </a>        colval
+dbstep in
+
+colval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',17,1)">17  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',12,1)">12  </a>        colval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',13,1)">13  </a>        for j = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',16,1)">16  </a>        colval
+dbstep in
+
+colval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',17,1)">17  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',12,1)">12  </a>        colval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',13,1)">13  </a>        for j = 1:n
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',16,1)">16  </a>        colval
+dbstep in
+
+colval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',17,1)">17  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',12,1)">12  </a>        colval = 0;
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',13,1)">13  </a>        for j = 1:n
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',14,1)">14  </a>            colval = colval + x(j,i);
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',15,1)">15  </a>        end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',16,1)">16  </a>        colval
+dbstep in
+
+colval =
+
+    34
+
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',17,1)">17  </a>    end
+dbstep in
+<a href="matlab: opentoline('H:\实习\motor\MATLAB\practice\magver.m',18,1)">18  </a>    diagval = sum((diag(x)))
+dbstep in
+
+diagval =
+
+    34
+
+函数 magver 末尾。
+dbstep in
+clear x
+clear msg
+clear all
+help magver
+ magic魔方矩阵的使用，行、列、对角线之和相等
+
+clc
+exp(2)
+
+ans =
+
+   7.389056098930650
+
+exp()
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exp')" style="font-weight:bold">exp</a>
+输入参数的数目不足。
+} 
+exp(1)
+
+ans =
+
+   2.718281828459046
+
+exp(3)
+
+ans =
+
+  20.085536923187668
+
+clc
+clear ans
+clc
+while i <= 100;
+while i <= 100
+sum += i;
+i++;
+ i++;
+    ↑
+{错误: 表达式或语句不完整或不正确。
+} 
+while i <= 100
+sum += i;
+i += 1;
+ i += 1;
+    ↑
+{错误: 等号左侧的表达式不是用于赋值的有效目标。
+} 
+while i <= 100
+sum += i;
+i = i+1;
+end
+sum
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sum')" style="font-weight:bold">sum</a>
+输入参数的数目不足。
+} 
+clc
+clear all
+clc
+ecoh
+{未定义函数或变量 'ecoh'。
+} 
+echo
+magver(4)
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+diagval =
+
+    34
+
+echo on
+magver(4)
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+diagval =
+
+    34
+
+echo on all
+magver(4)
+function f = magver(n)
+%magic魔方矩阵的使用，行、列、对角线之和相等
+if n > 2
+    x = magic(n);
+function M = magic(n)
+%MAGIC  Magic square.
+%   MAGIC(N) is an N-by-N matrix constructed from the integers
+%   1 through N^2 with equal row, column, and diagonal sums.
+%   Produces valid magic squares for all N > 0 except N = 2.
+
+%   Copyright 1984-2011 The MathWorks, Inc. 
+
+n = floor(real(double(n(1))));
+
+if mod(n,2) == 1
+elseif mod(n,4) == 0
+   % Doubly even order.
+   % Doubly even order.
+   J = fix(mod(1:n,4)/2);
+   K = bsxfun(@eq,J',J);
+   M = bsxfun(@plus,(1:n:(n*n))',0:n-1);
+   M(K) = n*n+1 - M(K);
+    for i = 1:n
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+    for i = 1:n
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+    diagval = sum((diag(x)))
+
+diagval =
+
+    34
+
+magver(4)
+function f = magver(n)
+%magic魔方矩阵的使用，行、列、对角线之和相等
+if n > 2
+    x = magic(n);
+function M = magic(n)
+%MAGIC  Magic square.
+%   MAGIC(N) is an N-by-N matrix constructed from the integers
+%   1 through N^2 with equal row, column, and diagonal sums.
+%   Produces valid magic squares for all N > 0 except N = 2.
+
+%   Copyright 1984-2011 The MathWorks, Inc. 
+
+n = floor(real(double(n(1))));
+
+if mod(n,2) == 1
+elseif mod(n,4) == 0
+   % Doubly even order.
+   % Doubly even order.
+   J = fix(mod(1:n,4)/2);
+   K = bsxfun(@eq,J',J);
+   M = bsxfun(@plus,(1:n:(n*n))',0:n-1);
+   M(K) = n*n+1 - M(K);
+    for i = 1:n
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+        rowval = 0;
+        for j = 1:n
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+            rowval = rowval + x(i,j);
+        end
+        rowval
+
+rowval =
+
+    34
+
+    end
+    for i = 1:n
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+        colval = 0;
+        for j = 1:n
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+            colval = colval + x(j,i);
+        end
+        colval
+
+colval =
+
+    34
+
+    end
+    diagval = sum((diag(x)))
+
+diagval =
+
+    34
+
+echo off all
+magver(4)
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+rowval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+colval =
+
+    34
+
+
+diagval =
+
+    34
+
+clc
+k = menu('choose a color','red','green','blue')
+
+k =
+
+     1
+
+k = menu('choose a color','red','green','blue','black')
+
+k =
+
+     3
+
+noe
+{未定义函数或变量 'noe'。
+} 
+now
+
+ans =
+
+     7.377578578526505e+05
+
+calendar
+                   Nov 2019
+     S     M    Tu     W    Th     F     S
+     0     0     0     0     0     1     2
+     3     4     5     6     7     8     9
+    10    11    12    13    14    15    16
+    17    18    19    20    21    22    23
+    24    25    26    27    28    29    30
+     0     0     0     0     0     0     0
+
+date
+
+ans =
+
+28-Nov-2019
+
+clock
+
+ans =
+
+   1.0e+03 *
+
+  1 至 4 列
+
+   2.019000000000000   0.011000000000000   0.028000000000000   0.020000000000000
+
+  5 至 6 列
+
+   0.035000000000000   0.055664000000000
+
+datevec
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('datevec', 'J:\matlab\matlab2016a\toolbox\matlab\timefun\datevec.p', 61)" style="font-weight:bold">datevec</a> (<a href="matlab: opentoline('J:\matlab\matlab2016a\toolbox\matlab\timefun\datevec.p',61,0)">line 61</a>)
+输入参数的数目不足。
+} 
+datetick
+datetick(now)
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('datetick>parseinputs', 'J:\matlab\matlab2016a\toolbox\matlab\timefun\datetick.m', 360)" style="font-weight:bold">datetick>parseinputs</a> (<a href="matlab: opentoline('J:\matlab\matlab2016a\toolbox\matlab\timefun\datetick.m',360,0)">line 360</a>)
+轴必须为 'x'、'y' 或 'z'。
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('datetick', 'J:\matlab\matlab2016a\toolbox\matlab\timefun\datetick.m', 108)" style="font-weight:bold">datetick</a> (<a href="matlab: opentoline('J:\matlab\matlab2016a\toolbox\matlab\timefun\datetick.m',108,0)">line 108</a>)
+[axh,nin,ax,dateform,keep_ticks,keep_limits] = parseinputs(varargin);
+} 
+matlab.internal.language.introspective.errorDocCallback('datetick>parseinputs', 'J:\matlab\matlab2016a\toolbox\matlab\timefun\datetick.m', 360)
+datetick(x)
+{未定义函数或变量 'x'。
+} 
+clc
+cd..
+ cd..
+   ↑
+{错误:  MATLAB 运算符异常。
+} 
+cd ..
+cd ..
+clc
